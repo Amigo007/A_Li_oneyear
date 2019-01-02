@@ -1,0 +1,19 @@
+url = https:www.proz.com
+#crawlling nessary info to fill the pool of GR
+
+step one 
+  adding plug-in components “ Web Scraper " on Google Chrome
+
+step two
+  get famill with quick-start-book of Web Scraper
+  
+step three
+  Scrape:
+    element:
+   	  div.quotes-wrapper:nth-of-type(2) div.job-quotes:nth-of-type(1) table.ez_form_table, div.job-quotes
+        name:
+ 	        div.userinfo_wrapper a span
+        contract:
+	        table.ez_form_table > tbody > tr:nth-of-type(3) td
+          
+          
