@@ -1,0 +1,60 @@
+excel formula
+
+=OFFSET($A$1,COLUMN(A1)-1+(ROW(A1)-1)*3,)&""   
+3行变3列 （*3  或*4）
+
+=COUNTIFS(F:F,"fixed",L:L,"Major")
+计数满足2个条件下的计数
+
+=COUNTIFS('Error Log'!F:F,"added",'Error Log'!$L:$L,"Critical")-COUNTIFS('Error Log'!$F:$F,"fixed",'Error Log'!$L:$L,"Critical")
+=COUNTIFS('Error Log'!F:F,"added",'Error Log'!$L:$L,"Major")-COUNTIFS('Error Log'!$F:$F,"fixed",'Error Log'!$L:$L,"Major")
+=COUNTIFS('Error Log'!F:F,"added",'Error Log'!$L:$L,"Minor")-COUNTIFS('Error Log'!$F:$F,"fixed",'Error Log'!$L:$L,"Minor")
+
+=formula( [表名.Xls]Sheet1!$列名$行名)
+
+=right(a1,len(a1)-find(",",a1))
+去除第一个逗号前的
+
+
+用下面的公式提取“,”前的部分，假设数据在A1中，则公式为：
+=left(a1,find(",",a1)-1)
+用下面的公式提取“,”后的部分，公式为：
+=right(a1,len(a1)-find(",",a1))
+
+
+=IF(H3=0,wdct(TRIM(B3)),0)
+
+=COUNTIFS('Error Log'!$A:$A,$A2,'Error Log'!$J:$J,E$1)
+
+=VLOOKUP($L3,$A$3:$J$1002,7,0)
+ 
+id
+	translator
+7	info
+
+10	segment id
+2	data item id
+4	segment data set name
+3	item data set name
+6		   
+								 
+
+计算唯一值个数（文本&数值）# 不得包含空白单元格
+=SUM(IF(FREQUENCY(MATCH(M6:M15,M6:M15,0),MATCH(M6:M15,M6:M15,0))>0,1))
+非英语 字数统计 10000
+=IF(LEN(TRIM(I2))=0,0,LEN(TRIM(I2))-LEN(SUBSTITUTE(I2," ",""))+1)
+
+=IF(COUNTIF(N:N,M8)>0,"重复","")
+中文
+=LENB(ASC(A1))-LEN(A1)
+
+count QA "new+ error"
+=COUNTIF(L:L,"New")+COUNTIF(L:L,"Error")+N("求A2:C21区域的平均值")
+
+count rebuttal "no yes"
+=COUNTIF(R:R,"no")
+=COUNTIF(R:R,"yes")
+
+count arbitration"no yes"
+=COUNTIF(T:T,"no")
+=COUNTIF(T:T,"yes")
