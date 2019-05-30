@@ -58,3 +58,9 @@ count rebuttal "no yes"
 count arbitration"no yes"
 =COUNTIF(T:T,"no")
 =COUNTIF(T:T,"yes")
+
+
+快速获取当前目录文件：
+ 右键新建一个txt文本文件。
+ 双击打开，输入“DIR *.* /B >LIST.TXT”，点击“CTRL”+"S"保存，关闭txt。
+ 右键此文本文件，重命名为“1.bat”文件。
